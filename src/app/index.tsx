@@ -1,14 +1,16 @@
-import { Text } from "@react-navigation/elements";
-import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-export default class index extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>this is my second react native app</Text>
-      </View>
-    );
-  }
+import * as Device from "expo-device";
+import { Platform, StyleSheet, Text, View } from "react-native";
+
+export default function HomeScreen() {
+  return (
+    <View style={styles.container}>
+      <Text>Welcome to Macrozone!</Text>
+      <Text>Running on: {Platform.OS}</Text>
+      <Text>Device Model: {Device.modelName}</Text>
+      <Text>Device Brand: {Device.brand}</Text>
+      <Text>OS version: {Device.osVersion} </Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
