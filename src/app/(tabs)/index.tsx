@@ -1,6 +1,5 @@
 import { globalStyles } from "@/styles/global";
-import { Link } from "expo-router";
-import { ScrollView, Text } from "react-native";
+import { ScrollView, Text, TouchableOpacity } from "react-native";
 import HomeHeader from "../../components/HomeHeader";
 
 export default function HomeScreen() {
@@ -8,9 +7,9 @@ export default function HomeScreen() {
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>Macrozone! </Text>
       <HomeHeader />
-      <Link href="/meals" style={{ fontSize: 18, color: "#007bff" }}>
-        Go to Meals
-      </Link>
+      <TouchableOpacity style={{ marginTop: 16 }} onPress={() => {}}>
+        <Text style={{ fontSize: 18, color: "#007bff" }}>Go to Meals</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 }

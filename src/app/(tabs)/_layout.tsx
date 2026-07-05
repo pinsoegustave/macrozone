@@ -1,4 +1,5 @@
 import { colors } from "@/styles/global";
+import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
 
@@ -25,7 +26,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="index"
+        name="add-meal"
         options={{
           title: "Add Meal",
           tabBarIcon: ({ color, size }) => (
@@ -34,7 +35,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="index"
+        name="meals"
         options={{
           title: "All meals",
           tabBarIcon: ({ color, size }) => (
